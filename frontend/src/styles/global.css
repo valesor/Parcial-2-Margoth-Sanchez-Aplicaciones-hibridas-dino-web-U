@@ -1,0 +1,145 @@
+/* ========================== */
+/* 1. Variables globales y estilos base */
+/* ========================== */
+:root {
+  --verde: #2e7d32;
+  --fondo: #f6f8fa;
+  --card-bg: #ffffff;
+  --texto: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ========================== */
+/* 2. Estilos del Dashboard */
+/* ========================== */
+.dashboard-container {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navegación entre pestañas */
+.dashboard-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.dashboard-tabs button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.dashboard-tabs button.active {
+  background-color: var(--verde);
+  color: white;
+}
+
+.dashboard-tabs button:hover {
+  background-color: #81c784;
+  color: white;
+}
+
+/* ========================== */
+/* 3. Tablas */
+/* ========================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #4caf50;
+  color: white;
+}
+
+thead th {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #eaf5ea;
+}
+
+td {
+  padding: 10px;
+  border: solid 1px #ddd;
+}
+
+/* Botones en las tablas */
+.actions button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+.actions button.edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.actions button.delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.actions button:hover {
+  opacity: 0.8;
+}
